@@ -11,10 +11,16 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
       - ./migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U otp_user -d otp_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
   otp-service:
     build: .
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     environment:
       DB_HOST: db
       DB_PORT: 5432
