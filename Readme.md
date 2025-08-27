@@ -113,7 +113,7 @@ go test ./...
 MIT
 
 ## Authors
-- Your Name <your.email@example.com>
+- Itdyaingenieria - diegoyamaa@gmail.com
 
 ---
 
