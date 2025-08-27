@@ -29,7 +29,7 @@ A robust, production-ready One-Time Password (OTP) microservice built with Go. T
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/itdyaingenieria/otp-service.git
 cd otp-service
 ```
 
